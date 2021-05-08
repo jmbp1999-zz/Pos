@@ -1,0 +1,49 @@
+<div class="main-wrap">
+  <h1 class="header-text">Customer Form</h1>
+  <hr>
+  <form [formGroup]="customerForm" (ngSubmit)="saveCustomer()">
+  <div class="col-12 col-sm-8 col-md-4 col-lg-3">
+    <label for="customerId" class="form-label">Customer ID</label>
+    <input formControlName="customerId"  type="text" class="form-control" id="customerId" >
+  </div>
+  <div class="col-12 col-sm-8 col-md-4 col-lg-3">
+    <label for="customerName" class="form-label">Customer Name</label>
+    <input formControlName="customerName" type="text" class="form-control" id="customerName">
+  </div>
+  <div class="col-12 col-sm-8 col-md-4 col-lg-3">
+    <label for="customerSalary" class="form-label">Customer Salary</label>
+    <input formControlName="customerSalary" type="number" class="form-control" id="customerSalary">
+  </div>
+  <div class="mb-3">
+    <label for="customerAddress" class="form-label">Customer Address</label>
+    <input formControlName="customerAddress" type="text" class="form-control" id="customerAddress">
+  </div>
+  </form>
+  <div class="button-wrap">
+    <button class="btn btn-primary btn-sm" type="submit">Save Customer</button>
+  </div>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Customer ID</th>
+      <th scope="col">Customer Name</th>
+      <th scope="col">Customer Salary</th>
+      <th scope="col">Customer Address</th>
+      <th scope="col">Operate</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td >C-001</td>
+      <td>Nimal</td>
+      <td>250000</td>
+      <td>Panadura</td>
+      <td>
+        <button>Delete</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
